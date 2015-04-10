@@ -23,7 +23,7 @@ public class SimpleEnemyAI : MonoBehaviour {
 		increment += (Speed / 100) * direction;
 
 		Vector3 pos = transform.position;
-		pos.x = Mathf.PingPong(Time.time, moveLength) + initialX;
+		pos.x = Mathf.PingPong(Time.time*2, moveLength) + initialX;
 		transform.position = pos;
 
 	}
