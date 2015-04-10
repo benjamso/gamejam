@@ -11,6 +11,7 @@ public class Mob : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		Debug.Log(other.tag);
 		if (other.tag == "Player") {
 			player.HP -= 1;
 			Debug.Log(player.HP);
