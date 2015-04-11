@@ -39,10 +39,17 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
+<<<<<<< HEAD
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+=======
 	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+>>>>>>> master
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +57,21 @@
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Resources\Sound\hei.txt" />
  <Reference Include="UnityEngine.UI">
+<<<<<<< HEAD
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.dll</HintPath>
+=======
  <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
@@ -69,6 +91,7 @@
  </Reference>
  <Reference Include="UnityEditor.Metro.Extensions">
  <HintPath>D:/Programfiler/Unity5/Editor/Data/PlaybackEngines/metrosupport/UnityEditor.Metro.Extensions.dll</HintPath>
+>>>>>>> master
  </Reference>
  <Reference Include="UnityEditor.BB10.Extensions">
  <HintPath>D:/Programfiler/Unity5/Editor/Data/PlaybackEngines/blackberryplayer/UnityEditor.BB10.Extensions.dll</HintPath>
@@ -88,8 +111,13 @@
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>D:/Programfiler/Unity5/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
+<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
+=======
+  </ItemGroup>
+  <ItemGroup>
+>>>>>>> master
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{51DED9B0-4870-33FA-856B-7453DCC2ECE9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
