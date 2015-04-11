@@ -9,6 +9,7 @@ public class IslandTimer : MonoBehaviour {
 
 	public Slider IslandLeft;
 	public Slider IslandRigth;
+	public Text text;
 
 
 
@@ -27,6 +28,8 @@ public class IslandTimer : MonoBehaviour {
 	
 		IslandLeft.value = remaining;
 		IslandRigth.value = remaining;
+
+		text.text = string.Format ("{0,3:D3}", (int)TimeLeft);
 
 		if (TimeLeft <= 0) {
 			//GameOver
