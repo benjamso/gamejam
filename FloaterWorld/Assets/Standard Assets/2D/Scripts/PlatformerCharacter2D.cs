@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -8,6 +9,8 @@ namespace UnityStandardAssets._2D
 		[SerializeField] private float m_MaxAirSpeed = 6f;
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
+		[SerializeField] private float m_SlideForce = 4000f;                // Amount of force added when the player slides.
+		[SerializeField] private float m_KnockBackForce = 3000f;            // Amount of force added when player takes damage.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
@@ -20,6 +23,7 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+		private Renderer spriteRenderer;
 
         private void Awake()
         {
@@ -28,6 +32,7 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+			spriteRenderer = GetComponent<Renderer> ();
         }
 
 
@@ -94,13 +99,25 @@ namespace UnityStandardAssets._2D
                 }
             }
             // If the player should jump...
-            if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+            if (m_Grounded && jump && !crouch && m_Anim.GetBool("Ground"))
             {
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             }
+
+			if (m_Grounded && crouch && m_Anim.GetBool ("Crouch")) {
+				// Add a vertical force to the player.
+				m_Grounded = true;
+				m_Anim.SetBool ("crouch", true);
+				if (jump) {
+					if(m_FacingRight)
+						m_Rigidbody2D.AddForce (new Vector2 (m_SlideForce, 0f));
+					if(!m_FacingRight)
+						m_Rigidbody2D.AddForce (new Vector2 ((-(m_SlideForce)),0f));
+				}
+			}
         }
 
 
@@ -114,5 +131,39 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+		void OnCollisionEnter2D(Collision2D collision) 
+		{
+			if(collision.gameObject.name == "Mob1")  // or if(gameObject.CompareTag("YourWallTag"))
+			{
+				
+				//			GetComponent<Rigidbody>().velocity = Vector3.zero;
+				//m_Rigidbody2D.velocity = Vector2.zero;
+				
+				if(m_FacingRight){
+					m_Rigidbody2D.AddForce(new Vector2(-(m_KnockBackForce), 1));
+				}
+				else{
+					m_Rigidbody2D.AddForce(new Vector2(m_KnockBackForce, 1));
+				}
+
+				
+				StartCoroutine( Wait (0.1f));
+				
+			}
+		}
+		
+		IEnumerator Wait(float seconds)
+		{
+			Debug.Log ("Wait");
+			
+			
+			spriteRenderer.enabled = false;
+			yield return new WaitForSeconds(seconds); 
+			spriteRenderer.enabled = true;
+			
+			
+			
+		}
     }
 }
