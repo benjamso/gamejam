@@ -50,13 +50,7 @@
      <Compile Include="Assets\Scripts\Enemies\JumpingEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\FallThroughFloor.cs" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Falling\Despawn.cs" />
-=======
->>>>>>> origin/master
->>>>>>> master
      <Compile Include="Assets\Scripts\Falling\Falling.cs" />
      <Compile Include="Assets\Scripts\Falling\FallingObject.cs" />
      <Compile Include="Assets\Scripts\HUD\IslandTimer.cs" />
