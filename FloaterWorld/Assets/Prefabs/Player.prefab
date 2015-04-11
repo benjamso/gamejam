@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 183114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.879999995, y: 1.5, z: 0}
-  m_LocalScale: {x: 1.77153289, y: 1.77153039, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 402028}
   - {fileID: 430600}
@@ -165,7 +165,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 3
+  m_GravityScale: 2
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -334,10 +334,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxAirSpeed: 6
   m_MaxSpeed: 10
-  m_JumpForce: 800
+  m_JumpForce: 500
   m_SlideForce: 4000
   m_KnockBackForce: 3000
   m_CrouchSpeed: .25
+  m_DoubleJump: 0
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
