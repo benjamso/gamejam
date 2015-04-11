@@ -7,15 +7,13 @@ public class CameraZoom : MonoBehaviour {
 	public int normal  = 5;
 	public float smooth = 5f; 
 	private bool isZoomed = false; 
-	private Camera camera;
+	public Camera camera;
 
 	void Start(){
 		camera = GetComponent<Camera> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
+	void Update () {
 		if (Input.GetKeyDown ("z")) { 
 			isZoomed = true; 
 		} 
@@ -23,11 +21,10 @@ public class CameraZoom : MonoBehaviour {
 			isZoomed = false;
 		}
 			
-			if(isZoomed == true){
+		if(isZoomed == true){
 			camera.orthographicSize = Mathf.Lerp(camera.orthographicSize,zoom,Time.deltaTime*smooth);
-			}else{
+		}else{
 			 camera.orthographicSize = Mathf.Lerp(camera.orthographicSize,normal,Time.deltaTime*smooth);
-			}
-
+		}
 	}
 }
