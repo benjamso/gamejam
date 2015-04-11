@@ -5,9 +5,10 @@
       <File FileName="Assets\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" Line="52" Column="25" />
       <File FileName="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Utility\FPSCounter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemies\SimpleEnemyAI.cs" Line="26" Column="3" />
+      <File FileName="Assets\Scripts\Enemies\SimpleEnemyAI.cs" Line="20" Column="64" />
       <File FileName="Assets\Scripts\Mob.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InteractableObjects\RisingDoor.cs" Line="47" Column="1" />
+      <File FileName="Assets\Scripts\InteractableObjects\RisingDoor.cs" Line="47" Column="3" />
+      <File FileName="Assets\Scripts\HUD\IslandTimer.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

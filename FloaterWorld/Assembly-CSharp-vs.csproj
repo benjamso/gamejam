@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Enemies\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\HUD\IslandTimer.cs" />
      <Compile Include="Assets\Scripts\HUDHPUpdate.cs" />
+     <Compile Include="Assets\Scripts\InteractableObjects\DoorLever.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\RisingDoor.cs" />
      <Compile Include="Assets\Scripts\Mob.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
