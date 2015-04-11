@@ -43,36 +43,6 @@
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
-<<<<<<< HEAD
-=======
-=======
-	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
->>>>>>> master
->>>>>>> origin/master
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
->>>>>>> origin/master
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -81,17 +51,6 @@
      <None Include="Assets\Resources\Sound\hei.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-<<<<<<< HEAD
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-=======
-<<<<<<< HEAD
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
@@ -131,58 +90,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
-=======
-=======
- <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
->>>>>>> origin/master
->>>>>>> origin/master
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/androidplayer/UnityEditor.Android.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.WP8.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/wp8support/UnityEditor.WP8.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Metro.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/metrosupport/UnityEditor.Metro.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.BB10.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/blackberryplayer/UnityEditor.BB10.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.WebGL.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/webglsupport/UnityEditor.WebGL.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.LinuxStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/linuxstandalonesupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.OSXStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
- </Reference>
-  </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
->>>>>>> origin/master
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{51DED9B0-4870-33FA-856B-7453DCC2ECE9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">

@@ -49,9 +49,10 @@
      <Compile Include="Assets\Scripts\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Enemies\JumpingEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\SimpleEnemyAI.cs" />
+     <Compile Include="Assets\Scripts\FallThroughFloor.cs" />
+     <Compile Include="Assets\Scripts\Falling\Despawn.cs" />
      <Compile Include="Assets\Scripts\Falling\Falling.cs" />
      <Compile Include="Assets\Scripts\Falling\FallingObject.cs" />
-     <Compile Include="Assets\Scripts\FallThroughFloor.cs" />
      <Compile Include="Assets\Scripts\HUD\IslandTimer.cs" />
      <Compile Include="Assets\Scripts\HUDHPUpdate.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\DoorLever.cs" />

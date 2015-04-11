@@ -43,45 +43,16 @@
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
-<<<<<<< HEAD
-=======
-=======
-	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
->>>>>>> master
->>>>>>> origin/master
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
->>>>>>> origin/master
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Enemies\JumpingEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\SimpleEnemyAI.cs" />
+     <Compile Include="Assets\Scripts\FallThroughFloor.cs" />
+     <Compile Include="Assets\Scripts\Falling\Despawn.cs" />
      <Compile Include="Assets\Scripts\Falling\Falling.cs" />
      <Compile Include="Assets\Scripts\Falling\FallingObject.cs" />
-     <Compile Include="Assets\Scripts\FallThroughFloor.cs" />
      <Compile Include="Assets\Scripts\HUD\IslandTimer.cs" />
      <Compile Include="Assets\Scripts\HUDHPUpdate.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\DoorLever.cs" />
@@ -98,36 +69,6 @@
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-<<<<<<< HEAD
-=======
-=======
- <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>D:/Programfiler/Unity5/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
->>>>>>> master
->>>>>>> origin/master
->>>>>>> e58316815ba5f4ea334325c33d55547e50f67080
->>>>>>> origin/master
  </Reference>
   </ItemGroup>
   <ItemGroup>
