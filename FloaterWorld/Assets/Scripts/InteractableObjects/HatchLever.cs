@@ -9,7 +9,6 @@ public class HatchLever : MonoBehaviour {
 	public bool open = false;
 	public GameObject cube;
 
-	// Use this for initialization
 	void Start () {
 		active = true;
 	}
@@ -17,8 +16,7 @@ public class HatchLever : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("trig " + other.tag);
 		if (active && other.tag == "Player") {
-			Inside = true;
-			
+			Inside = true;			
 		}
 	}
 	

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -21,6 +22,7 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+		private Renderer spriteRenderer;
 
         private void Awake()
         {
@@ -29,6 +31,7 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+			spriteRenderer = GetComponent<Renderer> ();
         }
 
 
@@ -127,5 +130,39 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+		void OnCollisionEnter2D(Collision2D collision) 
+		{
+			if(collision.gameObject.name == "Mob1")  // or if(gameObject.CompareTag("YourWallTag"))
+			{
+				
+				//			GetComponent<Rigidbody>().velocity = Vector3.zero;
+				//m_Rigidbody2D.velocity = Vector2.zero;
+				
+				if(m_FacingRight){
+					m_Rigidbody2D.AddForce(new Vector2(-3000, 1));
+				}
+				else{
+					m_Rigidbody2D.AddForce(new Vector2(3000, 1));
+				}
+
+				
+				StartCoroutine( Wait (0.1f));
+				
+			}
+		}
+		
+		IEnumerator Wait(float seconds)
+		{
+			Debug.Log ("Wait");
+			
+			
+			spriteRenderer.enabled = false;
+			yield return new WaitForSeconds(seconds); 
+			spriteRenderer.enabled = true;
+			
+			
+			
+		}
     }
 }
