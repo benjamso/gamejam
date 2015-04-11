@@ -142,7 +142,7 @@ namespace UnityStandardAssets._2D
 			// If the player jumps while crouching, apply horizontal force.
 			if (m_Grounded && crouch && m_Anim.GetBool ("Crouch")) {
 				m_Grounded = true;
-				m_Anim.SetBool ("crouch", true);
+				m_Anim.SetBool ("Crouch", true);
 				if (jump) {
 					if(m_FacingRight)
 						m_Rigidbody2D.AddForce (new Vector2 (m_SlideForce, 0f));
