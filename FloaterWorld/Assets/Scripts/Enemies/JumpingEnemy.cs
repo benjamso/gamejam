@@ -26,6 +26,7 @@ public class JumpingEnemy : MonoBehaviour {
 	void Update () {
 
 		var heading = playerPos.position - this.transform.position;
+
 		var distance = heading.magnitude;
 		var direction = heading / distance;
 
