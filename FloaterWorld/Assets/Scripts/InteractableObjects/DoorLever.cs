@@ -4,9 +4,6 @@ using System.Collections;
 public class DoorLever : MonoBehaviour {
 	public float halfSideLength;
 
-	Transform pivot;
-	
-	private float journeyLength;
 	private bool open = false;
 	public bool active = true;
 
@@ -19,16 +16,12 @@ public class DoorLever : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//pivot.position.y = transform.position.y - halfSideLength;
-		//
-		journeyLength = Vector3.Distance(Door.transform.position, Door.transform.position);
 		active = true;
 	}
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("trig " + other.tag);
 		if (active && other.tag == "Player") {
 			Inside = true;
-
 		}
 	}
 
@@ -40,6 +33,7 @@ public class DoorLever : MonoBehaviour {
 
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.E) && Inside) {
+			Debug.Log ("Trykket E");
 			if(open){
 				open = false;
 				
@@ -50,8 +44,7 @@ public class DoorLever : MonoBehaviour {
 				                                        , Time.deltaTime *2);
 				
 				SetTriggerColor(new Color(255,0,0));
-				
-				active = false;
+
 				transform.Rotate(Vector3.forward, -45.0f);
 			}else{
 				open = true;
@@ -63,8 +56,7 @@ public class DoorLever : MonoBehaviour {
 				                                        , Time.deltaTime * 2);
 				
 				SetTriggerColor(new Color(0,255,0));
-				
-				active = false;
+
 				transform.Rotate(Vector3.forward, 45.0f);
 			}
 		}
