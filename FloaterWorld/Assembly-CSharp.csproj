@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Enemies\JumpingEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\HUD\IslandTimer.cs" />

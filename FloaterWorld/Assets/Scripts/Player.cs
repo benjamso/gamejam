@@ -10,11 +10,15 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		HUDText.text = "HP: " + HP;
+		if (HUDText != null) {
+			HUDText.text = "HP: " + HP;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		HUDText.text = "HP: " + HP;
+		if (HUDText != null) {
+			HUDText.text = "HP: " + HP;
+		}
 	}
 }
