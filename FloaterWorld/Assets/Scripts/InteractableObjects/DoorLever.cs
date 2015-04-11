@@ -23,8 +23,6 @@ public class DoorLever : MonoBehaviour {
 		//
 		journeyLength = Vector3.Distance(Door.transform.position, Door.transform.position);
 		active = true;
-		closedPos = Door.transform.position.y;
-		openPos = closedPos + 30;
 	}
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("trig " + other.tag);
