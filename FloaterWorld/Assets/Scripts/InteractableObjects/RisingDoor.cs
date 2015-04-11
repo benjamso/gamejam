@@ -6,7 +6,6 @@ public class RisingDoor : MonoBehaviour {
 
 
 	private float journeyLength;
-	private bool open = false;
 	public bool active = true;
 	public RisingDoor otherTrigger;
 
@@ -17,7 +16,6 @@ public class RisingDoor : MonoBehaviour {
 	public GameObject Door;
 	// Use this for initialization
 	void Start () {
-		journeyLength = Vector3.Distance(Door.transform.position, Door.transform.position);
 		active = true;
 	}
 
@@ -25,8 +23,6 @@ public class RisingDoor : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("trig " + other.tag);
 		if (active && other.tag == "Player") {
-			open = true;
-
 			Door.transform.position = Vector3.Lerp (Door.transform.position, 
 			                                        new Vector3(Door.transform.position.x,
 													            Door.transform.position.y + 30,

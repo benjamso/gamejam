@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 	public Text HUDText;
 
-
 	public int HP = 5;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -21,4 +22,6 @@ public class Player : MonoBehaviour {
 			HUDText.text = "HP: " + HP;
 		}
 	}
+
+
 }
