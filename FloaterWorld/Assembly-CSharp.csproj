@@ -63,6 +63,10 @@
      <Compile Include="Assets\Scripts\Mob.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+<<<<<<< HEAD
+     <None Include="Assets\Resources\Sound\hei.txt" />
+=======
+>>>>>>> master
  <Reference Include="UnityEngine.UI">
 <<<<<<< HEAD
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
