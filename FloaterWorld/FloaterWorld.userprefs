@@ -1,10 +1,38 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Falling\Despawn.cs">
     <Files>
       <File FileName="Assets\Scripts\Falling\FallingObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Falling\Falling.cs" Line="35" Column="31" />
       <File FileName="Assets\Scripts\Falling\Despawn.cs" Line="7" Column="28" />
+=======
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mob.cs">
+=======
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Falling\Falling.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Falling\FallingObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Falling\Falling.cs" Line="35" Column="31" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs">
+>>>>>>> master
+    <Files>
+      <File FileName="Assets/Scripts/Mob.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HUDHPUpdate.cs" Line="1" Column="1" />
+      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="165" Column="26" />
+      <File FileName="Assets/Standard Assets/2D/Scripts/Platformer2DUserControl.cs" Line="1" Column="1" />
+<<<<<<< HEAD
+=======
+      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="146" Column="16" />
+>>>>>>> origin/master
+>>>>>>> master
+>>>>>>> e00dab219cbcdd61443661b8aee5c0b77ecc08b5
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

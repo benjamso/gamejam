@@ -50,8 +50,18 @@
      <Compile Include="Assets\Scripts\Enemies\JumpingEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\FallThroughFloor.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Falling\Despawn.cs" />
      <Compile Include="Assets\Scripts\Falling\Despawn2D.cs" />
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     <Compile Include="Assets\Scripts\Falling\Despawn.cs" />
+=======
+>>>>>>> origin/master
+>>>>>>> master
+>>>>>>> e00dab219cbcdd61443661b8aee5c0b77ecc08b5
      <Compile Include="Assets\Scripts\Falling\Falling.cs" />
      <Compile Include="Assets\Scripts\Falling\FallingObject.cs" />
      <Compile Include="Assets\Scripts\HUD\IslandTimer.cs" />
@@ -62,6 +72,7 @@
      <Compile Include="Assets\Scripts\Mob.cs" />
      <Compile Include="Assets\Scripts\MovingPlatformZ.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\PowerUps\DoubleJumpPowerUp.cs" />
      <Compile Include="Assets\Scripts\TimeactivatedFloor.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Resources\Sound\hei.txt" />
