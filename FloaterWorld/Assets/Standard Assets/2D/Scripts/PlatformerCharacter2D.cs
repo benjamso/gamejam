@@ -26,7 +26,8 @@ namespace UnityStandardAssets._2D
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		private Renderer spriteRenderer;
 		private List<AudioClip> m_jumpAudioClips = new List<AudioClip>();
-		private AudioSource m_jumpSound;
+		private List<AudioClip> m_dmgAudioClips = new List<AudioClip>();
+		private AudioSource m_actionSound;
 
 
         private void Awake()
@@ -38,14 +39,21 @@ namespace UnityStandardAssets._2D
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
 			spriteRenderer = GetComponent<Renderer> ();
 			loadAudioClips ();
-			m_jumpSound = GetComponent<AudioSource> ();
+			m_actionSound = GetComponent<AudioSource> ();
         }
 
 		private void loadAudioClips(){
-			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump1", typeof(AudioClip)) as AudioClip);
-			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump2", typeof(AudioClip)) as AudioClip);
-			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump3", typeof(AudioClip)) as AudioClip);
-			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump4", typeof(AudioClip)) as AudioClip);
+			// Load jump clips
+			m_jumpAudioClips.Add (Resources.Load ("Sound/jump1", typeof(AudioClip)) as AudioClip);
+			m_jumpAudioClips.Add (Resources.Load ("Sound/jump2", typeof(AudioClip)) as AudioClip);
+			m_jumpAudioClips.Add (Resources.Load ("Sound/jump3", typeof(AudioClip)) as AudioClip);
+			m_jumpAudioClips.Add (Resources.Load ("Sound/jump4", typeof(AudioClip)) as AudioClip);
+
+			// Load dmg clips
+			m_dmgAudioClips.Add (Resources.Load ("Sound/dmg1", typeof(AudioClip)) as AudioClip);
+			m_dmgAudioClips.Add (Resources.Load ("Sound/dmg2", typeof(AudioClip)) as AudioClip);
+			m_dmgAudioClips.Add (Resources.Load ("Sound/dmg3", typeof(AudioClip)) as AudioClip);
+			m_dmgAudioClips.Add (Resources.Load ("Sound/dmg4", typeof(AudioClip)) as AudioClip);
 		}
 
 
@@ -115,8 +123,8 @@ namespace UnityStandardAssets._2D
             if (m_Grounded && jump && !crouch && m_Anim.GetBool("Ground"))
             {
 				// Play jumping sound
-				m_jumpSound.clip = m_jumpAudioClips[UnityEngine.Random.Range(0, m_jumpAudioClips.Count)];
-				m_jumpSound.Play();
+				m_actionSound.clip = m_jumpAudioClips[UnityEngine.Random.Range(0, m_jumpAudioClips.Count)];
+				m_actionSound.Play();
 
 
                 // Add a vertical force to the player.
@@ -154,12 +162,7 @@ namespace UnityStandardAssets._2D
 		{
 			if(collision.gameObject.name == "Mob1")  // or if(gameObject.CompareTag("YourWallTag"))
 			{
-
-
-				
-				//			GetComponent<Rigidbody>().velocity = Vector3.zero;
-				//m_Rigidbody2D.velocity = Vector2.zero;
-				
+				playRandomDmgSound();	
 				if(m_FacingRight){
 					m_Rigidbody2D.AddForce(new Vector2(-(m_KnockBackForce), 1));
 				}
@@ -176,14 +179,16 @@ namespace UnityStandardAssets._2D
 		IEnumerator Wait(float seconds)
 		{
 			Debug.Log ("Wait");
-			
-			
 			spriteRenderer.enabled = false;
 			yield return new WaitForSeconds(seconds); 
 			spriteRenderer.enabled = true;
-			
-			
-			
+		}
+
+		// Play random damage sound
+		void playRandomDmgSound(){
+			// Play jumping sound
+			m_actionSound.clip = m_dmgAudioClips[UnityEngine.Random.Range(0, m_jumpAudioClips.Count)];
+			m_actionSound.Play();
 		}
     }
 }
