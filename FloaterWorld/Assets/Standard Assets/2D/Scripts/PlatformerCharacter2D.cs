@@ -13,8 +13,12 @@ namespace UnityStandardAssets._2D
 		[SerializeField] private float m_SlideForce = 4000f;                // Amount of force added when the player slides.
 		[SerializeField] private float m_KnockBackForce = 3000f;            // Amount of force added when player takes damage.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
-        [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
-        [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
+		[SerializeField] private bool m_DoubleJump = false;					// Double jump enabled or not.
+		[SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
+        [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character.
+                       // Number of jumps possible with upgrades. Used for double or N-jumps
+
+
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -29,7 +33,8 @@ namespace UnityStandardAssets._2D
 		private List<AudioClip> m_DmgAudioClips = new List<AudioClip>();
 		private List<AudioClip> m_SlideAudioClips = new List<AudioClip>();
 		private AudioSource m_ActionSound;
-
+		private bool m_DoubleJumpReset;     // Number of jumps since last grounded.
+		
 
         private void Awake()
         {
@@ -72,8 +77,11 @@ namespace UnityStandardAssets._2D
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject)
+				if (colliders[i].gameObject != gameObject){
                     m_Grounded = true;
+					m_DoubleJumpReset = true;
+				}
+					
             }
             m_Anim.SetBool("Ground", m_Grounded);
 
@@ -126,18 +134,34 @@ namespace UnityStandardAssets._2D
                 }
             }
             // If the player should jump...
-            if (m_Grounded && jump && !crouch && m_Anim.GetBool("Ground"))
-            {
-				// Play jumping sound
-				m_ActionSound.clip = m_JumpAudioClips[UnityEngine.Random.Range(0, m_JumpAudioClips.Count)];
-				m_ActionSound.Play();
+            if (jump) {
+				if (m_Grounded) {
+					// Play jumping sound
+					m_ActionSound.clip = m_JumpAudioClips [UnityEngine.Random.Range (0, m_JumpAudioClips.Count)];
+					m_ActionSound.Play ();
+					
+					// Add a vertical force to the player.
+					m_Grounded = false;
+					m_Anim.SetBool ("Ground", false);
+					m_Rigidbody2D.AddForce (Vector2.up* m_JumpForce);
+				
+					// Double jump if reset and DoubleJump is true, and character is not grounded.
+				}else if(!m_Grounded && m_DoubleJumpReset && m_DoubleJump){
 
+					//store x,y velocity in vel, and set y velocity to 0 to prevent superjumping.
+					Vector2 vel = m_Rigidbody2D.velocity;
+					vel.y = 0;
+					m_Rigidbody2D.velocity = vel;
 
-                // Add a vertical force to the player.
-                m_Grounded = false;
-                m_Anim.SetBool("Ground", false);
-                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-            }
+					// Play jumping sound
+					m_ActionSound.clip = m_JumpAudioClips [UnityEngine.Random.Range (0, m_JumpAudioClips.Count)];
+					m_ActionSound.Play ();
+
+					// Jump a second time
+					m_Rigidbody2D.AddForce (Vector2.up* m_JumpForce);
+					m_DoubleJumpReset = false;
+				}
+			}
 
 			// If the player jumps while crouching, apply horizontal force.
 			if (m_Grounded && crouch && m_Anim.GetBool ("Crouch")) {
