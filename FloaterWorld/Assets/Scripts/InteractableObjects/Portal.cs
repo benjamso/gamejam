@@ -5,6 +5,11 @@ public class Portal : MonoBehaviour {
 
 	public bool CanTeleport;
 	public GameObject Player;
+	private Vector3 startpos;
+
+	void Start(){
+		startpos = Player.transform.position;
+	}
 
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -20,7 +25,7 @@ public class Portal : MonoBehaviour {
 
 
 		if(CanTeleport && Input.GetKeyDown(KeyCode.E)){
-			Player.transform.position = new Vector3(0.96f,1.33f,0f);
+			Player.transform.position = startpos;
 		}
 	}
 
