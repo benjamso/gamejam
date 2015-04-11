@@ -18,7 +18,9 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		HUDText.text = "HP: " + HP;
+		if (HUDText != null) {
+			HUDText.text = "HP: " + HP;
+		}
 	}
 
 
