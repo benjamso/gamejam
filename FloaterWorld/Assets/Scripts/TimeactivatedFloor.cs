@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class TimeactivatedFloor : MonoBehaviour {
 
@@ -10,7 +9,7 @@ public class TimeactivatedFloor : MonoBehaviour {
 	public Color DeactivatedColor;
 	public GameObject plane;
 	private Renderer renderer;
-	private DateTime StartTime;
+	private float StartTime;
 	private bool active;
 
 	public float activeTime;
@@ -23,11 +22,21 @@ public class TimeactivatedFloor : MonoBehaviour {
 		} else {
 			renderer.material.color = DeactivatedColor;
 		}
-		StartTime = DateTime.Now;
+		StartTime = Time.time;
 		active = StartEnabled;
 	}
 
 	void Update () {
-		
+		 if (active && (StartTime + activeTime) > Time.time) {
+			active = false;
+			StartTime = Time.time;
+			renderer.material.color = DeactivatedColor;
+		}
+
+		if (!active && (StartTime + deactivatedTime) > Time.time) {
+			active = true;
+			StartTime = Time.time;
+			renderer.material.color = EnabledColor;
+		}
 	}
 }
