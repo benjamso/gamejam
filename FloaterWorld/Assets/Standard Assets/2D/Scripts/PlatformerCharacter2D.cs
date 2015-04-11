@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace UnityStandardAssets._2D
 {
@@ -23,6 +24,9 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		private Renderer spriteRenderer;
+		private List<AudioClip> m_jumpAudioClips = new List<AudioClip>();
+		private AudioSource m_jumpSound;
+
 
         private void Awake()
         {
@@ -32,7 +36,16 @@ namespace UnityStandardAssets._2D
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
 			spriteRenderer = GetComponent<Renderer> ();
+			loadAudioClips ();
+			m_jumpSound = GetComponent<AudioSource> ();
         }
+
+		private void loadAudioClips(){
+			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump1", typeof(AudioClip)) as AudioClip);
+			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump2", typeof(AudioClip)) as AudioClip);
+			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump3", typeof(AudioClip)) as AudioClip);
+			m_jumpAudioClips.Add (Resources.Load ("Sound/Jump4", typeof(AudioClip)) as AudioClip);
+		}
 
 
         private void FixedUpdate()
@@ -100,6 +113,11 @@ namespace UnityStandardAssets._2D
             // If the player should jump...
             if (m_Grounded && jump && !crouch && m_Anim.GetBool("Ground"))
             {
+				// Play jumping sound
+				m_jumpSound.clip = m_jumpAudioClips[UnityEngine.Random.Range(0, m_jumpAudioClips.Count)];
+				m_jumpSound.Play();
+
+
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
@@ -135,6 +153,8 @@ namespace UnityStandardAssets._2D
 		{
 			if(collision.gameObject.name == "Mob1")  // or if(gameObject.CompareTag("YourWallTag"))
 			{
+
+
 				
 				//			GetComponent<Rigidbody>().velocity = Vector3.zero;
 				//m_Rigidbody2D.velocity = Vector2.zero;
