@@ -8,6 +8,7 @@ namespace UnityStandardAssets._2D
 		[SerializeField] private float m_MaxAirSpeed = 6f;
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
+		[SerializeField] private float m_SlideForce = 4000f;                  // Amount of force added when the player slides.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
@@ -94,13 +95,25 @@ namespace UnityStandardAssets._2D
                 }
             }
             // If the player should jump...
-            if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+            if (m_Grounded && jump && !crouch && m_Anim.GetBool("Ground"))
             {
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             }
+
+			if (m_Grounded && crouch && m_Anim.GetBool ("Crouch")) {
+				// Add a vertical force to the player.
+				m_Grounded = true;
+				m_Anim.SetBool ("crouch", true);
+				if (jump) {
+					if(m_FacingRight)
+						m_Rigidbody2D.AddForce (new Vector2 (m_SlideForce, 0f));
+					if(!m_FacingRight)
+						m_Rigidbody2D.AddForce (new Vector2 ((-(m_SlideForce)),0f));
+				}
+			}
         }
 
 
