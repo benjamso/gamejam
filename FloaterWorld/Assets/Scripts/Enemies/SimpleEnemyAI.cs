@@ -21,7 +21,7 @@ public class SimpleEnemyAI : MonoBehaviour {
 		transform.position = pos;
 	}
 
-	void OnTriggerEnter2D(Collider other){
+	void OnTriggerEnter2D(Collider2D other){
 		direction = direction * -1;
 	}
 

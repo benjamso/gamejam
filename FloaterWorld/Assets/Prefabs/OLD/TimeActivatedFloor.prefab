@@ -232,13 +232,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartEnabled: 0
-  EnabledColor: {r: 1, g: 1, b: 1, a: 1}
-  DeactivatedColor: {r: 0, g: 0, b: 0, a: 0}
-  plane: {fileID: 108634}
   activeTime: 4
   deactivatedTime: 4
   collider: {fileID: 134686}
-  Light: {fileID: 123648}
+  OffRed: {fileID: 0}
+  OnRed: {fileID: 0}
+  OffGreen: {fileID: 0}
+  OnGreen: {fileID: 0}
 --- !u!135 &13595236
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -11,12 +11,20 @@ public class DoorLever : MonoBehaviour {
 	public GameObject DoorlLight;
 	
 	public GameObject Door;
+	public GameObject DoorOpen;
+
+	private Renderer doorRenderer;
+	private Renderer doorOpenRenderer;
 
 	private bool Inside = false;
 
 	// Use this for initialization
 	void Start () {
 		active = true;
+		doorRenderer = Door.GetComponent<Renderer> ();
+		 doorOpenRenderer = DoorOpen.GetComponent<Renderer> ();
+		doorRenderer.enabled = true;
+		doorOpenRenderer.enabled = false;
 	}
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("trig " + other.tag);
@@ -36,24 +44,19 @@ public class DoorLever : MonoBehaviour {
 			Debug.Log ("Trykket E");
 			if(open){
 				open = false;
-				
-				Door.transform.position = Vector3.Lerp (Door.transform.position, 
-				                                        new Vector3(Door.transform.position.x,
-				            Door.transform.position.y - 15,
-				            Door.transform.position.z)
-				                                        , Time.deltaTime *2);
+				doorRenderer.enabled = true;
+				doorOpenRenderer.enabled = false;
+				Door.GetComponent<Collider2D> ().isTrigger = false;
+
 				
 				SetTriggerColor(new Color(255,0,0));
 
 				transform.Rotate(Vector3.forward, -45.0f);
 			}else{
 				open = true;
-				
-				Door.transform.position = Vector3.Lerp (Door.transform.position, 
-				                                        new Vector3(Door.transform.position.x,
-				            Door.transform.position.y + 15,
-				            Door.transform.position.z)
-				                                        , Time.deltaTime * 2);
+				doorRenderer.enabled = false;
+				doorOpenRenderer.enabled = true;
+				Door.GetComponent<Collider2D> ().isTrigger = true;
 				
 				SetTriggerColor(new Color(0,255,0));
 

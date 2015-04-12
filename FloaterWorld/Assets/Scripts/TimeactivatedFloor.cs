@@ -5,10 +5,7 @@ public class TimeactivatedFloor : MonoBehaviour {
 
 
 	public bool StartEnabled;
-	public Color EnabledColor;
-	public Color DeactivatedColor;
-	public GameObject plane;
-	private Renderer renderer;
+
 	private float StartTime;
 	private bool active;
 	private float nextSwitch;
@@ -18,23 +15,42 @@ public class TimeactivatedFloor : MonoBehaviour {
 
 	public GameObject collider;
 	private Collider2D col;
-	public GameObject Light;
-	private Renderer LightRenderer;
+
+
+	public GameObject OffRed;
+	public GameObject OnRed;
+	public GameObject OffGreen;
+	public GameObject OnGreen;
+
+	private Renderer OffRedRenderer;
+	private Renderer OnRedRenderer;
+	private Renderer OffGreenRenderer;
+	private Renderer OnGreenRenderer;
+
 
 	// Use this for initialization
 	void Start () {
-		renderer = plane.GetComponent<Renderer> ();
+	
 		this.gameObject.GetComponent<Collider2D> ().isTrigger = true;
 		col = collider.GetComponent<Collider2D> ();
 		col.isTrigger = false;
-		LightRenderer = Light.GetComponent<Renderer> ();
+
+		OffRedRenderer = OffRed.GetComponent<Renderer> ();
+		OnRedRenderer = OnRed.GetComponent<Renderer> ();
+		OffGreenRenderer = OffGreen.GetComponent<Renderer> ();
+		OnGreenRenderer = OnGreen.GetComponent<Renderer> ();
+
+		OffRedRenderer.enabled = false; 
+		OnRedRenderer.enabled = false; 
+		OffGreenRenderer.enabled = false;
+		OnGreenRenderer.enabled = false;
 
 		StartTime = Time.time;
 		if (StartEnabled) {
-			renderer.material.color = EnabledColor;
+			OnGreenRenderer.enabled = true;
 			nextSwitch = StartTime + activeTime;
 		} else {
-			renderer.material.color = DeactivatedColor;
+			OffRedRenderer.enabled = true;
 			nextSwitch = StartTime + deactivatedTime;
 		}
 
@@ -44,27 +60,30 @@ public class TimeactivatedFloor : MonoBehaviour {
 	void Update () {
 
 		if (active && (Time.time > (nextSwitch - 0.5f))) {
-			LightRenderer.material.color = new Color (255, 0, 0);
+			OnRedRenderer.enabled = true;
+			OnGreenRenderer.enabled = false;
+			//LightRenderer.material.color = new Color (255, 0, 0);
 		}
 		if (!active && (Time.time > (nextSwitch - 0.5f))) {
-			LightRenderer.material.color = new Color (0, 255, 0);
+			//LightRenderer.material.color = new Color (0, 255, 0);
+			OffGreenRenderer.enabled = true;
+			OffRedRenderer.enabled = false;
 		}
 
 		 if (active && ( Time.time> nextSwitch )) {
 			active = false;
 			col.isTrigger = true;
 			nextSwitch = Time.time + deactivatedTime;
-
-			renderer.material.color = DeactivatedColor;
-			Debug.Log ("deaktiverer");
+			OffRedRenderer.enabled = true;
+			OnRedRenderer.enabled = false;
 		}
 
 		if (!active && ( Time.time> nextSwitch )) {
 			active = true;
 			col.isTrigger = false;
 			nextSwitch = Time.time + activeTime;
-			renderer.material.color = EnabledColor;
-			Debug.Log ("aktiverer");
+			OnGreenRenderer.enabled = true;
+			OffGreenRenderer.enabled = false;
 		}
 	}
 }
