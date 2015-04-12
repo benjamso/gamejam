@@ -46,30 +46,31 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EnemyHitWall.cs" />
-     <Compile Include="Assets\FlipWorld.cs" />
-     <Compile Include="Assets\HelperMessage.cs" />
-     <Compile Include="Assets\PickUpArm.cs" />
-     <Compile Include="Assets\PullRobot.cs" />
      <Compile Include="Assets\Scripts\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Enemies\JumpingEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\SimpleEnemyAI.cs" />
-     <Compile Include="Assets\Scripts\FallThroughFloor.cs" />
+     <Compile Include="Assets\Scripts\EnemyHitWall.cs" />
      <Compile Include="Assets\Scripts\Falling\Despawn.cs" />
      <Compile Include="Assets\Scripts\Falling\Despawn2D.cs" />
+     <Compile Include="Assets\Scripts\Falling\FallThroughFloor.cs" />
      <Compile Include="Assets\Scripts\Falling\Falling.cs" />
      <Compile Include="Assets\Scripts\Falling\FallingObject.cs" />
+     <Compile Include="Assets\Scripts\FlipWorld.cs" />
      <Compile Include="Assets\Scripts\HUD\IslandTimer.cs" />
      <Compile Include="Assets\Scripts\HUDHPUpdate.cs" />
+     <Compile Include="Assets\Scripts\HelperMessage.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\DoorLever.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\HatchLever.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\Portal.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\RisingDoor.cs" />
      <Compile Include="Assets\Scripts\Mob.cs" />
      <Compile Include="Assets\Scripts\MovingPlatformZ.cs" />
+     <Compile Include="Assets\Scripts\PickupBluePrint.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PowerUps\DoubleJumpPowerUp.cs" />
+     <Compile Include="Assets\Scripts\PowerUps\PickUpArm.cs" />
      <Compile Include="Assets\Scripts\PowerUps\PickupTime.cs" />
+     <Compile Include="Assets\Scripts\PullRobot.cs" />
      <Compile Include="Assets\Scripts\TimeactivatedFloor.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Resources\Sound\hei.txt" />
