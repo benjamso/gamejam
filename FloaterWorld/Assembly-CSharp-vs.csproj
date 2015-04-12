@@ -39,10 +39,17 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
+<<<<<<< HEAD
 	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+=======
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+>>>>>>> origin/master
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -65,11 +72,13 @@
      <Compile Include="Assets\Scripts\InteractableObjects\Portal.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\RisingDoor.cs" />
      <Compile Include="Assets\Scripts\Island\Elevator.cs" />
+     <Compile Include="Assets\Scripts\Island\Elevator2D.cs" />
+     <Compile Include="Assets\Scripts\Island\ElevatorFor3D.cs" />
      <Compile Include="Assets\Scripts\Island\IslandPingPong.cs" />
-     <Compile Include="Assets\Scripts\Island\MovingPlatformZ.cs" />
-     <Compile Include="Assets\Scripts\Island\SmallIslandFloati.cs" />
+     <Compile Include="Assets\Scripts\Island\SmallI.cs" />
      <Compile Include="Assets\Scripts\Island\Tmp_Floating_Island.cs" />
      <Compile Include="Assets\Scripts\Mob.cs" />
+     <Compile Include="Assets\Scripts\MovingPlatformZ.cs" />
      <Compile Include="Assets\Scripts\PickupBluePrint.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PowerUps\DoubleJumpPowerUp.cs" />
@@ -81,10 +90,14 @@
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Resources\Sound\hei.txt" />
  <Reference Include="UnityEngine.UI">
+<<<<<<< HEAD
  <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+=======
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+>>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>D:/Programfiler/Unity5/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
