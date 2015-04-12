@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\EnemyHitWall.cs" />
      <Compile Include="Assets\FlipWorld.cs" />
+     <Compile Include="Assets\HelperMessage.cs" />
      <Compile Include="Assets\PickUpArm.cs" />
      <Compile Include="Assets\PullRobot.cs" />
      <Compile Include="Assets\Scripts\CameraZoom.cs" />
