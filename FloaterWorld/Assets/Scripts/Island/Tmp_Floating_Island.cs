@@ -14,6 +14,7 @@ public class Tmp_Floating_Island : MonoBehaviour {
 	private System.DateTime tid;
 
 	private float speed;
+	private System.DateTime delay;
 
 	void Start () {
 		playerTouchesFloor = false;
@@ -24,6 +25,7 @@ public class Tmp_Floating_Island : MonoBehaviour {
 		col.isTrigger = false;
 
 		speed = 1.0f * Time.deltaTime;
+		delay = System.DateTime.Now;
 	}
 
 	void Update () {
@@ -41,7 +43,7 @@ public class Tmp_Floating_Island : MonoBehaviour {
 			col.isTrigger = false;
 		}
 
-		if (!playerTouchesFloor) {
+		if (!playerTouchesFloor && (System.DateTime.Now - delay).TotalMilliseconds >= 1500) {
 			transform.position = Vector3.MoveTowards(transform.position, startPos, speed);
 		}
 	}
@@ -52,5 +54,6 @@ public class Tmp_Floating_Island : MonoBehaviour {
 	
 	void OnTriggerExit2D(Collider2D other){
 		playerTouchesFloor = false;
+		delay = System.DateTime.Now;
 	}
 }
