@@ -13,7 +13,7 @@ namespace UnityStandardAssets._2D
 		[SerializeField] private float m_SlideForce = 4000f;                // Amount of force added when the player slides.
 		[SerializeField] private float m_KnockBackForce = 3000f;            // Amount of force added when player takes damage.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
-		[SerializeField] private bool m_DoubleJump = false;					// Double jump enabled or not.
+		public bool m_DoubleJump = false;					// Double jump enabled or not.
 		[SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character.
                        // Number of jumps possible with upgrades. Used for double or N-jumps
@@ -35,6 +35,9 @@ namespace UnityStandardAssets._2D
 		private AudioSource m_ActionSound;
 		private bool m_DoubleJumpReset;     // Number of jumps since last grounded.
 		
+		public void GiveDoubleJump(){
+			m_DoubleJump = true;
+		}
 
         private void Awake()
         {
