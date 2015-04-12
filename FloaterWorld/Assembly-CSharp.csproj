@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\InteractableObjects\HatchLever.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\Portal.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\RisingDoor.cs" />
+     <Compile Include="Assets\Scripts\Island\Floating_Island_large.cs" />
      <Compile Include="Assets\Scripts\Island\NnUse\Elevator.cs" />
      <Compile Include="Assets\Scripts\Island\NnUse\Elevator2D.cs" />
      <Compile Include="Assets\Scripts\Island\NnUse\ElevatorFor3D.cs" />
