@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Kule
+  - Enemy
+  - TheWorld
+  - Magnet
   layers:
   - Default
   - TransparentFX

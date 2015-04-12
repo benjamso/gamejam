@@ -13,11 +13,15 @@ public class Portal : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D other){
-		CanTeleport = true;
+		if (other.gameObject.tag == "Player") {
+			CanTeleport = true;
+		}
 	}
 	
 	void OnTriggerExit2D(Collider2D other){
-		CanTeleport = false;
+		if (other.gameObject.tag == "Player") {
+			CanTeleport = false;
+		}
 	}
 
 
