@@ -3,22 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Kule
-<<<<<<< HEAD
-  - Player
-=======
-  - Enemy
-  - TheWorld
-  - Magnet
->>>>>>> master
+  tags: []
   layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
   - 
   - 
   - 
@@ -45,7 +31,10 @@ TagManager:
   - 
   - 
   - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers: []
