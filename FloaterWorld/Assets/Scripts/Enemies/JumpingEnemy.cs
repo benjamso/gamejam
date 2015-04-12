@@ -8,7 +8,7 @@ public class JumpingEnemy : MonoBehaviour {
 
 	private float JumpIntervall = 3.0f;
 	private float lastJump;
-	private bool IsJumping = false;
+	[SerializeField] private bool IsJumping = false;
 
 	private bool CloseEnoughtToAttack = false;
 	public float attackRange = 5.0f;
