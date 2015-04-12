@@ -1,26 +1,11 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PowerUps/DoubleJumpPowerUp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Falling\Despawn2D.cs">
     <Files>
-      <File FileName="Assets/Scripts/Mob.cs" Line="19" Column="3" />
-      <File FileName="Assets/Scripts/PowerUps/DoubleJumpPowerUp.cs" Line="31" Column="22" />
-      <File FileName="Assets/Scripts/Player.cs" Line="6" Column="22" />
-      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="204" Column="1" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InteractableObjects\Portal.cs">
-    <Files>
-      <File FileName="Assets\Standard Assets\Utility\FPSCounter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemies\SimpleEnemyAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InteractableObjects\RisingDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MovingPlatformZ.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InteractableObjects\HatchLever.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FallThroughFloor.cs" Line="32" Column="4" />
-      <File FileName="Assets\Scripts\TimeactivatedFloor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InteractableObjects\Portal.cs" Line="14" Column="20" />
-      <File FileName="Assets\Scripts\Enemies\JumpingEnemy.cs" Line="30" Column="36" />
->>>>>>> master
+      <File FileName="Assets\Scripts\Falling\FallingObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Falling\Falling.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Falling\Despawn.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\Falling\Despawn2D.cs" Line="10" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
