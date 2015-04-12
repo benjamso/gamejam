@@ -39,7 +39,7 @@ public class DoorLever : MonoBehaviour {
 				
 				Door.transform.position = Vector3.Lerp (Door.transform.position, 
 				                                        new Vector3(Door.transform.position.x,
-				            Door.transform.position.y - 30,
+				            Door.transform.position.y - 15,
 				            Door.transform.position.z)
 				                                        , Time.deltaTime *2);
 				
@@ -51,7 +51,7 @@ public class DoorLever : MonoBehaviour {
 				
 				Door.transform.position = Vector3.Lerp (Door.transform.position, 
 				                                        new Vector3(Door.transform.position.x,
-				            Door.transform.position.y + 30,
+				            Door.transform.position.y + 15,
 				            Door.transform.position.z)
 				                                        , Time.deltaTime * 2);
 				
