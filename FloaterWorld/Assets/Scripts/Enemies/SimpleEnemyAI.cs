@@ -7,6 +7,7 @@ public class SimpleEnemyAI : MonoBehaviour {
 	public float moveLength;
 	public int direction = -1;
 	private float initialX;
+	private bool facingRight;
 	
 	private Rigidbody2D body;
 	void Start () {
@@ -18,6 +19,7 @@ public class SimpleEnemyAI : MonoBehaviour {
 	void Update () {
 		Vector3 pos = transform.position;
 		pos.x = (Mathf.PingPong(Time.time, moveLength) * direction) + initialX;
+
 		transform.position = pos;
 	}
 
