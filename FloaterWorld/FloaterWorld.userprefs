@@ -1,11 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PickupBluePrint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/JumpingEnemy.cs">
     <Files>
-      <File FileName="Assets\HelperMessage.cs" Line="21" Column="3" />
-      <File FileName="Assets\Scripts\TimeactivatedFloor.cs" Line="1" Column="1" />
-      <File FileName="Assets\FlipWorld.cs" Line="27" Column="42" />
-      <File FileName="Assets\PickupBluePrint.cs" Line="9" Column="36" />
+      <File FileName="Assets/Scripts/Enemies/JumpingEnemy.cs" Line="11" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
