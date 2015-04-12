@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Island\IslandPingPong.cs" />
      <Compile Include="Assets\Scripts\Island\MovingPlatformZ.cs" />
      <Compile Include="Assets\Scripts\Island\SmallIslandFloati.cs" />
+     <Compile Include="Assets\Scripts\Island\Tmp_Floating_Island.cs" />
      <Compile Include="Assets\Scripts\Mob.cs" />
      <Compile Include="Assets\Scripts\PickupBluePrint.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
@@ -76,7 +77,6 @@
      <Compile Include="Assets\Scripts\PowerUps\PickupTime.cs" />
      <Compile Include="Assets\Scripts\PullRobot.cs" />
      <Compile Include="Assets\Scripts\TimeactivatedFloor.cs" />
-     <Compile Include="Assets\Scripts\Tmp_Floating_Island.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Resources\Sound\hei.txt" />
  <Reference Include="UnityEngine.UI">
