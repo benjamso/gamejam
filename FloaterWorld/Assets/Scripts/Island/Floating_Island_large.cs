@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Floating_Island_Large : MonoBehaviour {
+public class Floating_Island_large : MonoBehaviour {
 	
 	private bool playerTouchesFloor;
 	
