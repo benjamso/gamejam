@@ -7,6 +7,7 @@ TagManager:
   - Kule
   - Enemy
   - TheWorld
+  - Magnet
   layers:
   - Default
   - TransparentFX

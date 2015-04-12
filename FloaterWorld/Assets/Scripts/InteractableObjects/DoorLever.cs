@@ -27,7 +27,6 @@ public class DoorLever : MonoBehaviour {
 		doorOpenRenderer.enabled = false;
 	}
 	void OnTriggerEnter2D(Collider2D other){
-		Debug.Log ("trig " + other.tag);
 		if (active && other.tag == "Player") {
 			Inside = true;
 		}
@@ -41,7 +40,6 @@ public class DoorLever : MonoBehaviour {
 
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.E) && Inside) {
-			Debug.Log ("Trykket E");
 			if(open){
 				open = false;
 				doorRenderer.enabled = true;
