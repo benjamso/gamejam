@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CameraZoom : MonoBehaviour {
 
-	public int zoom  = 6; 
-	public int normal  = 5;
+	public int zoom  = 2; 
+	public float normal  = 1.5f;
 	public float smooth = 5f; 
 	private bool isZoomed = false; 
 	public Camera camera;

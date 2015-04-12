@@ -5,7 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Kule
+<<<<<<< HEAD
   - Player
+=======
+  - Enemy
+  - TheWorld
+  - Magnet
+>>>>>>> master
   layers:
   - Default
   - TransparentFX

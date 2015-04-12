@@ -7,7 +7,6 @@ namespace UnityStandardAssets._2D
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-			Debug.Log ("Kom i trigger");
             if (other.tag == "Player")
             {
                 Application.LoadLevel(Application.loadedLevelName);
