@@ -8,9 +8,6 @@ public class PickupTime : MonoBehaviour {
 
 	void Start(){
 		var obj = GameObject.Find ("HUD");
-		if (obj == null) {
-			Debug.Log ("YIS");
-		}
 		timer = obj.GetComponent<IslandTimer>();
 	}
 

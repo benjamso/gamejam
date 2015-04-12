@@ -7,6 +7,8 @@ namespace UnityStandardAssets._2D
     [RequireComponent(typeof (PlatformerCharacter2D))]
     public class Platformer2DUserControl : MonoBehaviour
     {
+		public bool hasMagneticArm = false;
+
         private PlatformerCharacter2D m_Character;
         private bool m_Jump;
 
@@ -30,22 +32,23 @@ namespace UnityStandardAssets._2D
 
         private void FixedUpdate()
         {
-			if (Input.GetKeyDown (KeyCode.X)) {
-				trykker = true;
-			}
-			if (Input.GetKeyUp (KeyCode.X)) {
-				trykker = false;
-			}
-			if (trykker) {
-				foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position,1f)) {
-					if(collider.tag == "Magnet"){
-						Debug.Log("Fant " + collider.gameObject.name);
-						var rigbod = GetComponent<Rigidbody2D>();
-						rigbod. AddForce((collider.transform.position - transform.position).normalized * 60f);
-					break;
+			if (hasMagneticArm) {
+				if (Input.GetKeyDown (KeyCode.X)) {
+					trykker = true;
+				}
+				if (Input.GetKeyUp (KeyCode.X)) {
+					trykker = false;
+				}
+				if (trykker) {
+					foreach (Collider2D collider in Physics2D.OverlapCircleAll(transform.position,1f)) {
+						if (collider.tag == "Magnet") {
+							Debug.Log ("Fant " + collider.gameObject.name);
+							var rigbod = GetComponent<Rigidbody2D> ();
+							rigbod.AddForce ((collider.transform.position - transform.position).normalized * 60f);
+							break;
+						}
 					}
 				}
-				//return;
 			}
             // Read the inputs.
             bool crouch = Input.GetKey(KeyCode.LeftControl);
