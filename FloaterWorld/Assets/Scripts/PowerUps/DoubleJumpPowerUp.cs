@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets._2D;
 
 public class DoubleJumpPowerUp : MonoBehaviour {
 	Player player;
 	AudioSource m_PickupSound;
 	[SerializeField] private bool m_PickedUp = false;
-
+	private PlatformerCharacter2D script;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,9 @@ public class DoubleJumpPowerUp : MonoBehaviour {
 		player = p.GetComponent<Player>();
 
 		m_PickupSound = GetComponent<AudioSource> ();
+		var obj = GameObject.Find ("Player");
+		script = obj.GetComponent<PlatformerCharacter2D>();
+
 	}
 	
 	// Update is called once per frame
@@ -29,6 +33,7 @@ public class DoubleJumpPowerUp : MonoBehaviour {
 			Debug.Log("Player picked up power up");
 			m_PickupSound.Play();
 			m_PickedUp = true;
+			script.GiveDoubleJump();
 			//Object.Destroy(gameObject);
 		}
 	}
