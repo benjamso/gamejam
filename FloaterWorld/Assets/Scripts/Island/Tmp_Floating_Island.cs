@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tmp_Floating_Island : MonoBehaviour {
+public class Tmp_Floating_Island{
 
 	private bool playerTouchesFloor;
+	private GameObject test;
+	private Collider2D col;
 
 	void Start () {
 		playerTouchesFloor = false;
