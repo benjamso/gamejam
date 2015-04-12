@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11496862}
   m_Layer: 0
   m_Name: PatrollingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12e8424e0792ff43b99c28849a8c17b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
-  moveLength: 5
+  Speed: 3
+  moveLength: 1
   direction: 1
 --- !u!212 &21294712
 SpriteRenderer:

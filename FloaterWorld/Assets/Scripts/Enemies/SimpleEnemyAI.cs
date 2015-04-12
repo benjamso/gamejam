@@ -17,7 +17,12 @@ public class SimpleEnemyAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 pos = transform.position;
-		pos.x = (Mathf.PingPong(Time.time*2, moveLength) * direction) + initialX;
+		pos.x = (Mathf.PingPong(Time.time, moveLength) * direction) + initialX;
 		transform.position = pos;
 	}
+
+	void OnTriggerEnter2D(Collider other){
+		direction = direction * -1;
+	}
+
 }
