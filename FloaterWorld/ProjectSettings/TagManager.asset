@@ -5,12 +5,6 @@ TagManager:
   serializedVersion: 2
   tags: []
   layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
   - 
   - 
   - 
@@ -37,7 +31,10 @@ TagManager:
   - 
   - 
   - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers: []
