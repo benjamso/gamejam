@@ -14,14 +14,12 @@ public class HatchLever : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		Debug.Log ("trig " + other.tag);
 		if (active && other.tag == "Player") {
 			Inside = true;			
 		}
 	}
 	
 	void OnTriggerExit2D(Collider2D other){
-		Debug.Log ("Gikk ut");
 		if (active && other.tag == "Player") {
 			Inside = false;
 		}
@@ -30,7 +28,6 @@ public class HatchLever : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.E) && Inside) {
-			Debug.Log ("Trykket E");
 			if(open){
 				open = false;
 				

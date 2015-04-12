@@ -2402,7 +2402,7 @@ Transform:
   - {fileID: 309275233}
   - {fileID: 1997577666}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &316296244
 Prefab:
   m_ObjectHideFlags: 0
@@ -6579,15 +6579,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1997577666}
     m_Modifications:
     - target: {fileID: 421768, guid: bd0ed8200a1d9d143bc93abbd98ebdf8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.802
+      value: -4.12527847
       objectReference: {fileID: 0}
     - target: {fileID: 421768, guid: bd0ed8200a1d9d143bc93abbd98ebdf8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.94499993
+      value: -.27377367
       objectReference: {fileID: 0}
     - target: {fileID: 421768, guid: bd0ed8200a1d9d143bc93abbd98ebdf8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6611,11 +6611,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421768, guid: bd0ed8200a1d9d143bc93abbd98ebdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd0ed8200a1d9d143bc93abbd98ebdf8, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &925836471 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 421768, guid: bd0ed8200a1d9d143bc93abbd98ebdf8, type: 2}
+  m_PrefabInternal: {fileID: 925836470}
 --- !u!1001 &930250695
 Prefab:
   m_ObjectHideFlags: 0
@@ -6878,6 +6882,10 @@ Prefab:
     - target: {fileID: 2012232, guid: 527a88ad8f9cdb94982a5725ee444fc8, type: 2}
       propertyPath: orthographic size
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872860, guid: 527a88ad8f9cdb94982a5725ee444fc8, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 527a88ad8f9cdb94982a5725ee444fc8, type: 2}
@@ -14101,6 +14109,7 @@ Transform:
   - {fileID: 224796735}
   - {fileID: 1848997206}
   - {fileID: 1176193487}
+  - {fileID: 925836471}
   m_Father: {fileID: 313390493}
   m_RootOrder: 1
 --- !u!4 &2005847771 stripped
