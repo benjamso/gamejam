@@ -39,24 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-<<<<<<< HEAD
 	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-=======
-<<<<<<< HEAD
-	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
-=======
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
->>>>>>> origin/master
->>>>>>> 159a865638786c325312fd59c2d8e7082f763085
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -82,16 +68,10 @@
      <Compile Include="Assets\Scripts\Island\Elevator2D.cs" />
      <Compile Include="Assets\Scripts\Island\ElevatorFor3D.cs" />
      <Compile Include="Assets\Scripts\Island\IslandPingPong.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Island\SmallI.cs" />
-     <Compile Include="Assets\Scripts\Mob.cs" />
-     <Compile Include="Assets\Scripts\MovingPlatformZ.cs" />
-=======
-     <Compile Include="Assets\Scripts\Island\MovingPlatformZ.cs" />
-     <Compile Include="Assets\Scripts\Island\SmallIslandFloati.cs" />
      <Compile Include="Assets\Scripts\Island\Tmp_Floating_Island.cs" />
      <Compile Include="Assets\Scripts\Mob.cs" />
->>>>>>> origin/master
+     <Compile Include="Assets\Scripts\MovingPlatformZ.cs" />
      <Compile Include="Assets\Scripts\PickupBluePrint.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PowerUps\DoubleJumpPowerUp.cs" />
@@ -103,32 +83,13 @@
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Resources\Sound\hei.txt" />
  <Reference Include="UnityEngine.UI">
-<<<<<<< HEAD
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-=======
-<<<<<<< HEAD
- <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>D:/Programfiler/Unity5/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
- </Reference>
-  </ItemGroup>
-  <ItemGroup>
-=======
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
->>>>>>> 159a865638786c325312fd59c2d8e7082f763085
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
-<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
-=======
-  </ItemGroup>
-  <ItemGroup>
->>>>>>> origin/master
->>>>>>> 159a865638786c325312fd59c2d8e7082f763085
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
       <Project>{51DED9B0-4870-33FA-856B-7453DCC2ECE9}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
