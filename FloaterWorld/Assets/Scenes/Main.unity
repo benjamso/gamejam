@@ -7487,6 +7487,62 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 455782, guid: eb3aa720e2a04aa4d9277d4523d5b8fd, type: 2}
   m_PrefabInternal: {fileID: 859735558}
+--- !u!1 &859910393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 859910395}
+  - 61: {fileID: 859910394}
+  - 114: {fileID: 859910396}
+  m_Layer: 0
+  m_Name: WorldFlipper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &859910394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859910393}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &859910395
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859910393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.717, y: -1.64699996, z: 0}
+  m_LocalScale: {x: 1.88999999, y: 1.26999998, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!114 &859910396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859910393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dfc9d9c34ab3804ab142efdac9f1ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheWorld: {fileID: 1243392342}
+  IsFlipped: 0
+  FlippIt: 0
 --- !u!1001 &862670665
 Prefab:
   m_ObjectHideFlags: 0
@@ -10343,7 +10399,7 @@ GameObject:
   - 4: {fileID: 1243392343}
   m_Layer: 0
   m_Name: RatatableWorld
-  m_TagString: Untagged
+  m_TagString: TheWorld
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10848,11 +10904,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 404480, guid: 527a88ad8f9cdb94982a5725ee444fc8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.1599998
+      value: 10.3009996
       objectReference: {fileID: 0}
     - target: {fileID: 404480, guid: 527a88ad8f9cdb94982a5725ee444fc8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.99000001
+      value: -.921999991
       objectReference: {fileID: 0}
     - target: {fileID: 404480, guid: 527a88ad8f9cdb94982a5725ee444fc8, type: 2}
       propertyPath: m_LocalPosition.z
