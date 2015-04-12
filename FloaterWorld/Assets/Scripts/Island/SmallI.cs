@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SmallIslandFloati : MonoBehaviour {
+public class SmallI : MonoBehaviour {
 
 
 	private bool playerTouchesFloor;
@@ -28,21 +28,21 @@ public class SmallIslandFloati : MonoBehaviour {
 	
 	void FixedUpdate(){
 		
-		/*if(HomeSpot.position == transform.position){
+		if(HomeSpot.position == transform.position){
 			Switch = true;
 		}
 		if(DieZone.position == transform.position){
 			Switch = false;
-		}*/
+		}
 		
 		
-		//if (Switch) {
-			//transform.position = Vector3.MoveTowards(transform.position, DieZone.position, Speed);
+		if (Switch) {
+			transform.position = Vector3.MoveTowards(transform.position, DieZone.position, Speed);
 		transform.position = new Vector3(Mathf.PingPong(Time.time, 3), transform.position.y, transform.position.z);
-		//} else {
-			//transform.position = Vector3.MoveTowards(transform.position, HomeSpot.position, Speed);
+		} else {
+			transform.position = Vector3.MoveTowards(transform.position, HomeSpot.position, Speed);
 			//transform.position = new Vector3(Mathf.PingPong(Time.time, 3), transform.position.y, transform.position.z);
-		//}
+		}
 		
 	}
 
