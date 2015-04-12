@@ -64,13 +64,6 @@
      <Compile Include="Assets\Scripts\InteractableObjects\HatchLever.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\Portal.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\RisingDoor.cs" />
-<<<<<<< HEAD
-     <Compile Include="Assets\Scripts\Island\Elevator.cs" />
-     <Compile Include="Assets\Scripts\Island\Elevator2D.cs" />
-     <Compile Include="Assets\Scripts\Island\ElevatorFor3D.cs" />
-     <Compile Include="Assets\Scripts\Island\IslandPingPong.cs" />
-     <Compile Include="Assets\Scripts\Island\SmallI.cs" />
-=======
      <Compile Include="Assets\Scripts\Island\Floating_Island_Medium.cs" />
      <Compile Include="Assets\Scripts\Island\Floating_Island_large.cs" />
      <Compile Include="Assets\Scripts\Island\NnUse\Elevator.cs" />
@@ -78,7 +71,6 @@
      <Compile Include="Assets\Scripts\Island\NnUse\ElevatorFor3D.cs" />
      <Compile Include="Assets\Scripts\Island\NnUse\IslandPingPong.cs" />
      <Compile Include="Assets\Scripts\Island\NnUse\SmallI.cs" />
->>>>>>> origin/master
      <Compile Include="Assets\Scripts\Island\Tmp_Floating_Island.cs" />
      <Compile Include="Assets\Scripts\Mob.cs" />
      <Compile Include="Assets\Scripts\MovingPlatformZ.cs" />
