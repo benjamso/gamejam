@@ -39,27 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-<<<<<<< HEAD
 	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
-=======
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
->>>>>>> origin/master
 	</Reference>
 	<Reference Include="UnityEditor">
-<<<<<<< HEAD
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-=======
 	  <HintPath>D:/Programfiler/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
-<<<<<<< HEAD
-=======
-=======
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -67,19 +50,7 @@
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Resources\Sound\hei.txt" />
  <Reference Include="UnityEngine.UI">
-<<<<<<< HEAD
  <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-=======
-<<<<<<< HEAD
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-=======
-<<<<<<< HEAD
- <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-=======
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Programfiler/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
